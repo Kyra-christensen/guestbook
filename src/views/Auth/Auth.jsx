@@ -15,7 +15,7 @@ export default function Auth() {
       event.preventDefault();
 
       await login(email, password);
-
+      console.log(location.search.origin)
       const url = location.search.origin ? location.search.pathname: '/';
 
       history.replace(url);

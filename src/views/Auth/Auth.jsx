@@ -37,6 +37,14 @@ export default function Auth() {
   };
 
   return (
-    <div>Auth</div>
+    <>
+      <form onSubmit={handleSubmit}>
+        <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="Email"/>
+        <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} placeholder="Password" />
+        <button onClick={handleSignUp}>Sign Up</button>
+        <button type="submit">Sign In</button>
+        <p>{error}</p>
+      </form>
+    </>
   )
 }

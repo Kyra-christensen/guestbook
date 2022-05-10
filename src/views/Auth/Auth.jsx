@@ -10,7 +10,31 @@ export default function Auth() {
   const location = useLocation();
   const history = useHistory();
 
-  
+  const handleSubmit = async (event) => {
+    try {
+      event.preventDefault();
+
+      await login(email, password);
+
+      const url = location.search.origin ? location.search.pathname: '/';
+
+      history.replace(url);
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
+  const handleSignUp = async () => {
+    try {
+      await signUp(email, password);
+
+      const url = location.search.origin ? location.search.pathname: '/';
+
+      history.replace(url);
+    } catch (error) {
+      setError(error.message);
+    }
+  };
 
   return (
     <div>Auth</div>

@@ -4,7 +4,7 @@ import Dashboard from './views/Dashboard/Dashboard';
 import Home from './views/Home/Home';
 import Header from './components/Header';
 import { UserProvider } from './context/UserContext';
-import { PrivateRoute } from './components/PrivateRoute';
+import PrivateRoute from './components/PrivateRoute';
 
 export default function App() {
   return (

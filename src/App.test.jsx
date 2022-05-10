@@ -47,7 +47,7 @@ const server = setupServer(
         },
       }))
   ),
-  rest.get(`${process.env.SUPABASE_API_URL}/rest/v1/entries`, (req, res, ctx) => res(ctx.json([
+  rest.get(`${process.env.SUPABASE_API_URL}/rest/v1/guestbook`, (req, res, ctx) => res(ctx.json([
     {
       "id": 7,
       "guest_id": "cfd6974c-6fc9-4a12-b2a1-facafdd2d594",
@@ -56,7 +56,7 @@ const server = setupServer(
       "user_id": "cfd6974c-6fc9-4a12-b2a1-facafdd2d594"
     },
   ]))),
-  rest.post(`${process.env.SUPABASE_API_URL}/rest/v1/entries`, (req, res, ctx) => res(ctx.json(
+  rest.post(`${process.env.SUPABASE_API_URL}/rest/v1/guestbook`, (req, res, ctx) => res(ctx.json(
     {
       "id": 8,
       "guest_id": "cfd6974c-6fc9-4a12-b2a1-facafdd2d594",
